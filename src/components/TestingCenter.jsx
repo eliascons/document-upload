@@ -44,7 +44,6 @@ const dropDownStyles = {
 
 const titleStyles = {
   paddingBottom: "2rem",
-  paddingLeft: "1rem",
   paddingRight: "1rem",
   fontFamily: "Roboto",
   color: colors.blue,

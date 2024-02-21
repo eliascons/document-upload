@@ -9,6 +9,7 @@ import RadioField from "./components/RadioField";
 import colors from "./theme/colors";
 import ValueField from "./components/ValueField";
 import TestingCenter from "./components/TestingCenter";
+import ToleranceWIndow from "./components/ToleranceWIndow";
 
 const App = () => {
   const [showModal, setShowmodal] = useState(false);
@@ -37,6 +38,7 @@ const App = () => {
                   title={"Elapse Data Checking:"}
                   description={"No Elapsed Dates"}
                 />
+                <ToleranceWIndow />
               </Box>
 
               <Box style={rigthPannelContainer}>
@@ -61,11 +63,68 @@ const App = () => {
                 <TestingCenter title={"Testing Center 4"} />
               </Box>
             </Box>
+            <Box sx={bottomText}>
+              Data in the import file is correct. Please press Continue to
+              import.
+            </Box>
+            <Box sx={btnsContainer}>
+              <Button sx={importBtnStyles}>Continue to import</Button>
+              <Button sx={cancelBtn}>Cancel</Button>
+            </Box>
           </Box>
         </Box>
       </Modal>
     </Box>
   );
+};
+
+const cancelBtn = {
+  textTransform: "none",
+  borderRadius: "10px",
+  backgroundColor: colors.white,
+  color: colors.yellow,
+  border: `solid 2px ${colors.yellow}`,
+  width: "20%",
+  margin: ".8rem",
+  padding: "1rem",
+  "&:hover": {
+    backgroundColor: colors.ligthGrey,
+    boxShadow: "none",
+    "&::before, &::after": {
+      borderRadius: "none",
+    },
+  },
+};
+
+const btnsContainer = {
+  display: "flex",
+  justifyContent: "center",
+};
+
+const bottomText = {
+  display: "flex",
+  justifyContent: "center",
+  fontFamily: "Roboto",
+  color: colors.blue,
+  fontSize: "1.2rem",
+  fontWeight: "800",
+};
+
+const importBtnStyles = {
+  textTransform: "none",
+  borderRadius: "10px",
+  backgroundColor: colors.blue,
+  width: "20%",
+  color: "white",
+  margin: ".8rem",
+  padding: "1rem",
+  "&:hover": {
+    backgroundColor: colors.blue,
+    boxShadow: "none",
+    "&::before, &::after": {
+      borderRadius: "none",
+    },
+  },
 };
 
 const openModalBtnStyles = {
