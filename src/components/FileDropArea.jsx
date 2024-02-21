@@ -4,6 +4,7 @@ import { useDropzone } from "react-dropzone";
 import { Button } from "@mui/material";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 import Select from "@mui/material/Select";
+import colors from "../theme/colors";
 import MenuItem from "@mui/material/MenuItem";
 
 const FileDropArea = () => {
@@ -31,11 +32,11 @@ const FileDropArea = () => {
         id="demo-select-small"
         value={"Select import name:"}
         sx={{
-          border: "1px solid rgb(177 166 166)",
+          border: `1px solid ${colors.darkGrey}`,
           borderRadius: "16px",
           marginBottom: "1rem",
           width: "100%",
-          color: "#243D6B",
+          color: colors.blue,
         }}
         renderValue={(selected) =>
           selected ? (
@@ -58,7 +59,7 @@ const FileDropArea = () => {
             <p style={textStyles}>Drop the files here...</p>
           ) : (
             <>
-              <TextSnippetIcon style={{ color: "#F79C25" }} />
+              <TextSnippetIcon style={{ color: colors.yellow }} />
               <p style={textStyles}>
                 Drag & Drop Here or{" "}
                 <strong style={{ fontWeight: "800" }}>Browse</strong>
@@ -78,13 +79,13 @@ const FileDropArea = () => {
 const uploadBtnStyles = {
   textTransform: "none",
   borderRadius: "10px",
-  backgroundColor: "#243D6B",
+  backgroundColor: colors.blue,
   width: "55%",
   color: "white",
   margin: ".8rem",
   padding: "1rem",
   "&:hover": {
-    backgroundColor: "#243D6B",
+    backgroundColor: colors.blue,
     boxShadow: "none",
     "&::before, &::after": {
       borderRadius: "none",
@@ -92,7 +93,6 @@ const uploadBtnStyles = {
   },
 };
 const mainContainer = {
-  margin: "3rem",
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
@@ -102,7 +102,7 @@ const mainContainer = {
 
 const fileDropContainer = {
   width: "100%",
-  border: "2px solid rgb(177 166 166)",
+  border: `1px solid ${colors.darkGrey}`,
   borderRadius: "8px",
   display: "flex",
   flexDirection: "column",
@@ -114,7 +114,7 @@ const fileDropContainer = {
 const fileDropStyle = {
   width: "80%",
   height: "70%",
-  border: "2px dashed rgb(177 166 166)",
+  border: `1px dashed ${colors.darkGrey}`,
   borderRadius: "8px",
   display: "flex",
   flexDirection: "column",
@@ -125,16 +125,16 @@ const fileDropStyle = {
 
 const textStyles = {
   fontFamily: "Roboto",
-  color: "#243D6B",
+  color: colors.blue,
   fontSize: "1rem",
   fontWeight: "500",
 };
 
 const labelStyles = {
   marginBottom: "1rem",
-  borderTop: "solid 2px #f5eaea",
+  borderTop: `solid 2px ${colors.ligthGrey}`,
   fontFamily: "Roboto",
-  color: "#243D6B",
+  color: colors.blue,
   fontSize: "1rem",
   fontWeight: "500",
   textAlign: "left",
