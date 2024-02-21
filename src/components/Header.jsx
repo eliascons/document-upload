@@ -14,6 +14,8 @@ const Header = ({ handleOpenModal }) => {
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
+        paddingLeft: "1rem",
+        paddingTop: "1rem",
       }}
     >
       <Button
@@ -21,8 +23,9 @@ const Header = ({ handleOpenModal }) => {
         color="primary"
         onClick={handleClose}
         sx={closeModalBtnStyles}
-        startIcon={<CloseIcon />}
-      />
+      >
+        <CloseIcon />
+      </Button>
       <Box sx={innerBoxStyles}>
         <Box sx={headerStyles}>Document Upload</Box>
       </Box>
@@ -47,12 +50,11 @@ const closeModalBtnStyles = {
   textTransform: "none",
   borderRadius: "8px",
   height: "1.5rem",
-  margin: "1rem 0 .5rem 2rem",
-  padding: "0",
-  flexDirection: "column",
-  alignItems: "flex-end",
+  alignItems: "center",
   backgroundColor: "#243D6B",
+  justifyContent: "center",
   minWidth: "2rem",
+  padding: "1rem",
 };
 
 const innerBoxStyles = {

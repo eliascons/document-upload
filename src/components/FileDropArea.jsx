@@ -50,7 +50,7 @@ const FileDropArea = () => {
         <MenuItem value="Import3">Import Name 3</MenuItem>
       </Select>
 
-      <Box style={labelStyles}>{`Select manifest you'd like to import`}</Box>
+      <Box style={labelStyles}>Select manifest you&apos;d like to import</Box>
       <Box style={fileDropContainer}>
         <Box {...getRootProps()} style={fileDropStyle}>
           <input {...getInputProps()} />
