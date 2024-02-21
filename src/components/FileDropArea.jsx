@@ -3,6 +3,8 @@ import Box from "@mui/material/Box";
 import { useDropzone } from "react-dropzone";
 import { Button } from "@mui/material";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 const FileDropArea = () => {
   const [files, setFiles] = useState([]);
@@ -24,6 +26,31 @@ const FileDropArea = () => {
 
   return (
     <Box sx={mainContainer}>
+      <Select
+        labelId="demo-select-small-label"
+        id="demo-select-small"
+        value={"Select import name:"}
+        sx={{
+          border: "1px solid rgb(177 166 166)",
+          borderRadius: "16px",
+          marginBottom: "1rem",
+          width: "100%",
+          color: "#243D6B",
+        }}
+        renderValue={(selected) =>
+          selected ? (
+            selected
+          ) : (
+            <MenuItem value="">Select import name:</MenuItem>
+          )
+        }
+      >
+        <MenuItem value="Import1">Import Name 1</MenuItem>
+        <MenuItem value="Import2">Import Name 2</MenuItem>
+        <MenuItem value="Import3">Import Name 3</MenuItem>
+      </Select>
+
+      <Box style={labelStyles}>{`Select manifest you'd like to import`}</Box>
       <Box style={fileDropContainer}>
         <Box {...getRootProps()} style={fileDropStyle}>
           <input {...getInputProps()} />
@@ -68,8 +95,9 @@ const mainContainer = {
   margin: "3rem",
   display: "flex",
   justifyContent: "center",
-  alignItems: "center",
+  alignItems: "flex-start",
   width: "40rem",
+  flexDirection: "column",
 };
 
 const fileDropContainer = {
@@ -100,6 +128,17 @@ const textStyles = {
   color: "#243D6B",
   fontSize: "1rem",
   fontWeight: "500",
+};
+
+const labelStyles = {
+  marginBottom: "1rem",
+  borderTop: "solid 2px #f5eaea",
+  fontFamily: "Roboto",
+  color: "#243D6B",
+  fontSize: "1rem",
+  fontWeight: "500",
+  textAlign: "left",
+  padding: ".4rem",
 };
 
 export default FileDropArea;
