@@ -26,4 +26,4 @@
 * App created using Vite
 * You can customize the development server port, browser-sync options, and other settings in `package.json`.
 
-**Enjoy using your React project with Vite!**
+![Image description](https://raw.githubusercontent.com/eliascons/document-upload/main/.github/images/project.png)
