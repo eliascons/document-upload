@@ -27,7 +27,7 @@ const App = () => {
       </Button>
       <Modal open={showModal} className="modal-content">
         <Box style={modalBodyStyles}>
-          <Box>
+          <Box sx={{ overflow: "auto" }}>
             <Header handleOpenModal={setShowmodal} />
             <Box sx={modalContainer}>
               <Box sx={leftPannelContainer}>

@@ -108,7 +108,7 @@ const fileDropContainer = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  height: "20rem",
+  height: "18rem",
 };
 
 const fileDropStyle = {
