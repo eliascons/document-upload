@@ -8,6 +8,7 @@ import FileDropArea from "./components/FileDropArea";
 import RadioField from "./components/RadioField";
 import colors from "./theme/colors";
 import ValueField from "./components/ValueField";
+import TestingCenter from "./components/TestingCenter";
 
 const App = () => {
   const [showModal, setShowmodal] = useState(false);
@@ -27,7 +28,7 @@ const App = () => {
       </Button>
       <Modal open={showModal} className="modal-content">
         <Box style={modalBodyStyles}>
-          <Box sx={{ overflow: "auto" }}>
+          <Box sx={{ overflow: "auto", maxWidth: "100rem" }}>
             <Header handleOpenModal={setShowmodal} />
             <Box sx={modalContainer}>
               <Box sx={leftPannelContainer}>
@@ -54,6 +55,10 @@ const App = () => {
                   option1={"Single"}
                   option2={"Multiple"}
                 />
+                <TestingCenter title={"Testing Center 1"} />
+                <TestingCenter title={"Testing Center 2"} />
+                <TestingCenter title={"Testing Center 3"} />
+                <TestingCenter title={"Testing Center 4"} />
               </Box>
             </Box>
           </Box>
@@ -78,6 +83,7 @@ const modalBodyStyles = {
   margin: "auto",
   borderRadius: "10px",
   flexDirection: "column",
+  maxWidth: "90%",
 };
 
 const modalContainer = {
@@ -89,6 +95,7 @@ const modalContainer = {
 
 const rigthPannelContainer = {
   flexDirection: "column",
+  width: "26rem",
 };
 
 const leftPannelContainer = {};

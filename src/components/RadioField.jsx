@@ -43,6 +43,7 @@ const questionContainer = {
 const radioGroupStyles = {
   display: "flex",
   alignItems: "center",
+  marginLeft: "-.5rem",
   color: colors.blue,
   fontWeight: "600",
   fontSize: ".8rem",

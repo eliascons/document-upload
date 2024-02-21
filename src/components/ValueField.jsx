@@ -15,7 +15,6 @@ const ValueField = ({ title, description }) => {
 const mainContainer = {
   paddingTop: "1rem",
   paddingBottom: "1rem",
-  marginBottom: ".5rem",
 };
 
 const titleStyles = {
@@ -32,8 +31,9 @@ const descriptionStyles = {
   color: colors.green,
 };
 const itemsWrapper = {
-  padding: "1rem",
-  maxWidth: "20rem",
+  paddingTop: "1rem",
+  paddingBottom: "1rem",
+  maxWidth: "23rem",
   borderTop: `2px solid ${colors.ligthGrey}`,
   borderBottom: `2px solid ${colors.ligthGrey}`,
 };

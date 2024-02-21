@@ -10,6 +10,12 @@ import MenuItem from "@mui/material/MenuItem";
 const FileDropArea = () => {
   const [files, setFiles] = useState([]);
 
+  const [selectedValue, setSelectedValue] = useState("Select Import Name:");
+
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
+
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDropAccepted: (acceptedFiles) => {
       setFiles(acceptedFiles);
@@ -27,25 +33,8 @@ const FileDropArea = () => {
 
   return (
     <Box sx={mainContainer}>
-      <Select
-        labelId="demo-select-small-label"
-        id="demo-select-small"
-        value={"Select import name:"}
-        sx={{
-          border: `1px solid ${colors.darkGrey}`,
-          borderRadius: "16px",
-          marginBottom: "1rem",
-          width: "100%",
-          color: colors.blue,
-        }}
-        renderValue={(selected) =>
-          selected ? (
-            selected
-          ) : (
-            <MenuItem value="">Select import name:</MenuItem>
-          )
-        }
-      >
+      <Select value={selectedValue} onChange={handleChange} sx={dropDownStyles}>
+        <MenuItem value="Select Import Name:">Select import name:</MenuItem>
         <MenuItem value="Import1">Import Name 1</MenuItem>
         <MenuItem value="Import2">Import Name 2</MenuItem>
         <MenuItem value="Import3">Import Name 3</MenuItem>
@@ -139,6 +128,14 @@ const labelStyles = {
   fontWeight: "500",
   textAlign: "left",
   padding: ".4rem",
+};
+
+const dropDownStyles = {
+  border: `1px solid ${colors.darkGrey}`,
+  borderRadius: "16px",
+  marginBottom: "1rem",
+  width: "100%",
+  color: colors.blue,
 };
 
 export default FileDropArea;
