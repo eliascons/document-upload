@@ -8,8 +8,9 @@
 
 .modal-content {
   background-color: white;
-  width: 80%;
+  width: 85%;
   height: 90%;
   margin: auto;
   border-radius: 10px;
+  overflow: auto;
 }

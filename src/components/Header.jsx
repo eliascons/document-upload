@@ -3,6 +3,33 @@ import CloseIcon from "@mui/icons-material/Close";
 import Button from "@mui/material/Button";
 import { useCallback } from "react";
 
+// eslint-disable-next-line react/prop-types
+const Header = ({ handleOpenModal }) => {
+  const handleClose = useCallback(() => {
+    handleOpenModal(false);
+  }, [handleOpenModal]);
+  return (
+    <Box
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleClose}
+        sx={closeModalBtnStyles}
+        startIcon={<CloseIcon />}
+      />
+      <Box sx={innerBoxStyles}>
+        <Box sx={headerStyles}>Document Upload</Box>
+      </Box>
+    </Box>
+  );
+};
+
 const headerStyles = {
   display: "flex",
   justifyContent: "center",
@@ -33,32 +60,4 @@ const innerBoxStyles = {
   alignItems: "center",
   flexDirection: "column",
 };
-
-// eslint-disable-next-line react/prop-types
-const Header = ({ handleOpenModal }) => {
-  const handleClose = useCallback(() => {
-    handleOpenModal(false);
-  }, [handleOpenModal]);
-  return (
-    <Box
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={handleClose}
-        sx={closeModalBtnStyles}
-        startIcon={<CloseIcon />}
-      />
-      <Box sx={innerBoxStyles}>
-        <Box sx={headerStyles}>Document Upload</Box>
-      </Box>
-    </Box>
-  );
-};
-
 export default Header;
