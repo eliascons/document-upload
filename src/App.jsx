@@ -79,7 +79,9 @@ const App = () => {
               </Box>
               <Box sx={btnsContainer}>
                 <Button sx={importBtnStyles}>Continue to import</Button>
-                <Button sx={cancelBtn}>Cancel</Button>
+                <Button sx={cancelBtn} onClick={handleOpenModal}>
+                  Cancel
+                </Button>
               </Box>
             </Box>
           </Box>
