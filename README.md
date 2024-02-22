@@ -25,5 +25,6 @@
 * Due to simplicity of the app uses JS instead of TS
 * App created using Vite
 * You can customize the development server port, browser-sync options, and other settings in `package.json`.
+* LIVE DEMO! https://document-upload.vercel.app/
 
 ![Image description](https://raw.githubusercontent.com/eliascons/document-upload/main/.github/images/project.png)
