@@ -10,15 +10,7 @@ const Header = ({ handleOpenModal }) => {
     handleOpenModal(false);
   }, [handleOpenModal]);
   return (
-    <Box
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        paddingLeft: "1rem",
-        paddingTop: "1rem",
-      }}
-    >
+    <Box sx={mainContainer}>
       <Button
         variant="contained"
         color="primary"
@@ -32,6 +24,14 @@ const Header = ({ handleOpenModal }) => {
       </Box>
     </Box>
   );
+};
+
+const mainContainer = {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+  paddingLeft: "1rem",
+  paddingTop: ".5rem",
 };
 
 const headerStyles = {

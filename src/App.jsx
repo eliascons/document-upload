@@ -84,7 +84,8 @@ const cancelBtn = {
   backgroundColor: colors.white,
   color: colors.yellow,
   border: `solid 2px ${colors.yellow}`,
-  width: "20%",
+  width: "15%",
+  height: "3rem",
   margin: ".8rem",
   padding: "1rem",
   "&:hover": {
@@ -114,8 +115,9 @@ const importBtnStyles = {
   textTransform: "none",
   borderRadius: "10px",
   backgroundColor: colors.blue,
-  width: "20%",
+  width: "15%",
   color: "white",
+  height: "3rem",
   margin: ".8rem",
   padding: "1rem",
   "&:hover": {
@@ -149,7 +151,7 @@ const modalContainer = {
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-evenly",
-  margin: "2rem",
+  paddingTop: "1.5rem",
 };
 
 const rigthPannelContainer = {
